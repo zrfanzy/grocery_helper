@@ -30,7 +30,10 @@
 <script defer src="lib/fontawesome-free-5.10.2-web/js/fontawesome.js"></script>
 </head>
 <body class="default">
-
+<script>
+  //number
+  var total_n = 7 - 1
+</script>
 <!-- Preloading -->
 <div class="preloading">
   <div class="wrap-preload">
@@ -53,72 +56,7 @@
       <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
     </li>
     <li>
-      <a href="#pagemyaccount" data-toggle="collapse" aria-expanded="false"><i class="fas fa-user"></i> My Account <span><i class="fas fa-caret-down"></i></span></a>
-      <ul class="collapse collapsible-body" id="pagemyaccount">
-        <li>
-          <a href="new_recipe.html">Add new recipe</a>
-        </li>
-        <li>
-          <a href="profile.html">Profile</a>
-        </li>
-
-        <li>
-          <a href="setting.html">Setting</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="#pagesubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-clone"></i> Pages <span><i class="fas fa-caret-down"></i></span></a>
-      <ul class="collapse collapsible-body" id="pagesubmenu">
-        <li>
-          <a href="homepage.html">Home</a>
-        </li>
-        <li>
-          <a href="recipe_list.html">Recipe list</a>
-        </li>
-        <li>
-          <a href="recipe_page.html">Recipe page</a>
-        </li> 
-        <li>
-          <a href="author.html">Author</a>
-        </li>
-        <li>
-          <a href="feedback.html">Feedback</a>
-        </li>
-        <li>
-          <a href="setting.html">Setting</a>
-        </li>
-        <li>
-          <a href="gallery.html">Gallery</a>
-        </li>
-         <li>
-          <a href="news_list.html">News list</a>
-        </li>
-        <li>
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <a href="register.html">Register</a>
-        </li>
-        <li>
-          <a href="login.html">Login</a>
-        </li>
-        <li>
-          <a href="new_recipe.html">New recipe</a>
-        </li>
-        <li>
-          <a href="profile.html">Profile</a>
-        </li>
-        <li>
-          <a href="favorite.html">Favorites</a>
-        </li>
-        <li>
-          <a href="single_page.html">Single page</a>
-        </li>
-        <li>
-          <a href="404.html">404 error page</a>
-        </li>
-      </ul>
+      <a href="recipe_list.html"><i class="fas fa-clone"></i> Dishes</a>
     </li>
     </ul>
   </nav>
@@ -155,39 +93,59 @@
         <div class="yml-carousel">
           <div class="yml-box">
             <div class="yml-img">
-              <img src="img/food9.jpg" alt="you might like">
+              <script>
+                var randomid1 = Math.round(Math.random() * total_n) + 1
+                var jspath = "foodinfo/" + randomid1 + '.js'
+                var imgpath = "foodimg/" + randomid1 + '.jpg'
+                document.write("<script type='text/javascript' src='"+ jspath + "'><\/scr" + "ipt>");
+              </script>
+              <script>
+                document.write('<a href="recipe_page.html?id=' + randomid1 + '">')
+                document.write('<img src="' + imgpath + '" alt="you might like">')
+                document.write('</a>')
+              </script>
             </div>
-            <div class="yml-food-text">Chicken Fried Steak</div>
+            <div class="yml-food-text"><script>document.write(foodinfo.name)</script></div>
           </div>
           <div class="yml-box">
             <div class="yml-img">
-              <img src="img/food10.jpg" alt="you might like">
+              <script>
+                var randomid2 = Math.round(Math.random() * total_n) + 1
+                while (randomid2 == randomid1)
+                {
+                  randomid2 = Math.round(Math.random() * total_n) + 1
+                }
+                var jspath = "foodinfo/" + randomid2 + '.js'
+                var imgpath = "foodimg/" + randomid2 + '.jpg'
+                document.write("<script type='text/javascript' src='"+ jspath + "'><\/scr" + "ipt>");
+              </script>
+              <script>
+                document.write('<a href="recipe_page.html?id=' + randomid2 + '">')
+                document.write('<img src="' + imgpath + '" alt="you might like">')
+                document.write('</a>')
+              </script>
             </div>
-            <div class="yml-food-text">Grilled Fish Tacos</div>
+            <div class="yml-food-text"><script>document.write(foodinfo.name)</script></div>
           </div>
           <div class="yml-box">
             <div class="yml-img">
-              <img src="img/food11.jpg" alt="you might like">
+              <script>
+                var randomid3 = Math.round(Math.random() * total_n) + 1
+                while (randomid3 == randomid1 || randomid3 == randomid2)
+                {
+                  randomid3 = Math.round(Math.random() * total_n) + 1
+                }
+                var jspath = "foodinfo/" + randomid3 + '.js'
+                var imgpath = "foodimg/" + randomid3 + '.jpg'
+                document.write("<script type='text/javascript' src='"+ jspath + "'><\/scr" + "ipt>");
+              </script>
+              <script>
+                document.write('<a href="recipe_page.html?id=' + randomid3 + '">')
+                document.write('<img src="' + imgpath + '" alt="you might like">')
+                document.write('</a>')
+              </script>
             </div>
-            <div class="yml-food-text">Steak with Garlic</div>
-          </div>
-          <div class="yml-box">
-            <div class="yml-img">
-              <img src="img/food12.jpg" alt="you might like">
-            </div>
-            <div class="yml-food-text">Harvest Salad</div>
-          </div>
-          <div class="yml-box">
-            <div class="yml-img">
-              <img src="img/food13.jpg" alt="you might like">
-            </div>
-            <div class="yml-food-text">Cheesy Pizza</div>
-          </div>
-          <div class="yml-box">
-            <div class="yml-img">
-              <img src="img/food14.jpg" alt="you might like">
-            </div>
-            <div class="yml-food-text">Teriyaki Chicken</div>
+            <div class="yml-food-text"><script>document.write(foodinfo.name)</script></div>
           </div>
         </div>
       </div>

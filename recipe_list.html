@@ -52,72 +52,7 @@
       <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
     </li>
     <li>
-      <a href="#pagemyaccount" data-toggle="collapse" aria-expanded="false"><i class="fas fa-user"></i> My Account <span><i class="fas fa-caret-down"></i></span></a>
-      <ul class="collapse collapsible-body" id="pagemyaccount">
-        <li>
-          <a href="new_recipe.html">Add new recipe</a>
-        </li>
-        <li>
-          <a href="profile.html">Profile</a>
-        </li>
-
-        <li>
-          <a href="setting.html">Setting</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="#pagesubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-clone"></i> Pages <span><i class="fas fa-caret-down"></i></span></a>
-      <ul class="collapse collapsible-body" id="pagesubmenu">
-        <li>
-          <a href="homepage.html">Home</a>
-        </li>
-        <li>
-          <a href="recipe_list.html">Recipe list</a>
-        </li>
-        <li>
-          <a href="recipe_page.html">Recipe page</a>
-        </li> 
-        <li>
-          <a href="author.html">Author</a>
-        </li>
-        <li>
-          <a href="feedback.html">Feedback</a>
-        </li>
-        <li>
-          <a href="setting.html">Setting</a>
-        </li>
-        <li>
-          <a href="gallery.html">Gallery</a>
-        </li>
-         <li>
-          <a href="news_list.html">News list</a>
-        </li>
-        <li>
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <a href="register.html">Register</a>
-        </li>
-        <li>
-          <a href="login.html">Login</a>
-        </li>
-        <li>
-          <a href="new_recipe.html">New recipe</a>
-        </li>
-        <li>
-          <a href="profile.html">Profile</a>
-        </li>
-        <li>
-          <a href="favorite.html">Favorites</a>
-        </li>
-        <li>
-          <a href="single_page.html">Single page</a>
-        </li>
-        <li>
-          <a href="404.html">404 error page</a>
-        </li>
-      </ul>
+      <a href="recipe_list.html"><i class="fas fa-clone"></i> Dishes</a>
     </li>
     </ul>
   </nav>
@@ -325,6 +260,40 @@
 
               <script>
                 var i = 5
+                var jspath = "foodinfo/" + (id+i) + '.js'
+                var imgpath = "foodimg/" + (id+i) + '.jpg'
+                  
+                document.write("<script type='text/javascript' src='"+ jspath + "'><\/scr" + "ipt>");
+              </script>
+              <script>
+                  document.write("<div class='lrc-item'>")
+                  document.write("  <a href='recipe_page.html?id="+(id+i)+"'>")
+                  document.write("    <div class='lrc-content'>")
+                  document.write("      <div class='lrc-img'>")
+                  document.write("        <img src='" + imgpath + "' alt='item'>")
+                  document.write("      </div>")
+                  document.write("      <div class='lrc-desc'>")
+                  document.write("        <div class='lrc-title'>" + foodinfo.name + "</div>")
+                  document.write("        <div class='lrc-text'>")
+                  document.write("          "+ foodinfo.keyword)
+                  document.write("        </div>")
+                  document.write("      <div class='lrc-button'>")
+                  document.write("        <div class='lrcb-left'>")
+                  document.write("          <span class='lhc hours'><i class='fas fa-clock'></i>" + foodinfo.duration+"</span>")
+                  document.write("        </div>")
+                  document.write("        <div class='lrcb-right'>")
+                  document.write("        </div>")
+                  document.write("      <div class='clear'></div>")
+                  document.write("    </div>")
+                  document.write("  </div>")
+                  document.write("</div>")
+                  document.write("</a>")
+                  document.write("</div>")
+                //}
+              </script>
+
+              <script>
+                var i = 6
                 var jspath = "foodinfo/" + (id+i) + '.js'
                 var imgpath = "foodimg/" + (id+i) + '.jpg'
                   
