@@ -30,7 +30,10 @@
 <script defer src="lib/fontawesome-free-5.10.2-web/js/fontawesome.js"></script>
 </head>
 <body class="default">
-
+<script>
+  //number
+  var total_n = 7 - 1
+</script>
 <!-- Preloading -->
 <div class="preloading">
   <div class="wrap-preload">
@@ -48,103 +51,14 @@
   <div class="sidebar-header">
     <h3>Menu</h3>
   </div>
-  <div class="sdprofile">
-    <div class="sdp-left">
-      <img src="img/profile5.jpg" alt="profile">
-    </div>
-    <div class="sdp-right">
-      <div class="sd-name">Sarah Corner</div>
-      <div class="sd-status">Exclusive Author</div>
-    </div>
-  </div>
   <ul class="list-unstyled components">
     <li>
       <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
     </li>
     <li>
-      <a href="#pagemyaccount" data-toggle="collapse" aria-expanded="false"><i class="fas fa-user"></i> My Account <span><i class="fas fa-caret-down"></i></span></a>
-      <ul class="collapse collapsible-body" id="pagemyaccount">
-        <li>
-          <a href="new_recipe.html">Add new recipe</a>
-        </li>
-        <li>
-          <a href="profile.html">Profile</a>
-        </li>
-
-        <li>
-          <a href="setting.html">Setting</a>
-        </li>
-      </ul>
+      <a href="recipe_list.html"><i class="fas fa-clone"></i> Dishes</a>
     </li>
-    <li>
-      <a href="#pagesubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-clone"></i> Pages <span><i class="fas fa-caret-down"></i></span></a>
-      <ul class="collapse collapsible-body" id="pagesubmenu">
-        <li>
-          <a href="homepage.html">Home</a>
-        </li>
-        <li>
-          <a href="recipe_list.html">Recipe list</a>
-        </li>
-        <li>
-          <a href="recipe_page.html">Recipe page</a>
-        </li> 
-        <li>
-          <a href="author.html">Author</a>
-        </li>
-        <li>
-          <a href="feedback.html">Feedback</a>
-        </li>
-        <li>
-          <a href="setting.html">Setting</a>
-        </li>
-        <li>
-          <a href="gallery.html">Gallery</a>
-        </li>
-         <li>
-          <a href="news_list.html">News list</a>
-        </li>
-        <li>
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <a href="register.html">Register</a>
-        </li>
-        <li>
-          <a href="login.html">Login</a>
-        </li>
-        <li>
-          <a href="new_recipe.html">New recipe</a>
-        </li>
-        <li>
-          <a href="profile.html">Profile</a>
-        </li>
-        <li>
-          <a href="favorite.html">Favorites</a>
-        </li>
-        <li>
-          <a href="single_page.html">Single page</a>
-        </li>
-        <li>
-          <a href="404.html">404 error page</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="favorite.html"><i class="fas fa-heart"></i> Favorites</a>
-    </li>
-    <li>
-      <a href="#"><i class="fas fa-star"></i> Rate</a>
-    </li>
-    <li>
-      <a href="feedback.html"><i class="fas fa-envelope"></i> Feedback</a>
-    </li>
-    <li>
-      <a href="setting.html"><i class="fas fa-cog"></i> Settings</a>
-    </li>
-    <li>
-      <a href="single_page.html"><i class="fas fa-exclamation-circle"></i> About</a>
-    </li>
-  </ul>
+    </ul>
   </nav>
   <!-- .Sidebar left -->
   <!-- Sidebar right -->
@@ -157,7 +71,7 @@
       <button type="button" id="sidebarleftbutton" class="btn">
       <i class="fas fa-align-left"></i>
       </button>
-      <div class="logo">Foodkuy</div>
+      <div class="logo">Grocery Helper</div>
     </div>
     </nav>
     <!-- .Header  -->
@@ -165,289 +79,86 @@
     <div class="content-wrap">
       <div class="img-hero">
         <div>
-          <img src="img/slide3.jpg" alt="slider">
+          <img src="img/slide1.jpg" alt="slider">
         </div>
         <div>
-          <img src="img/slide4.jpg" alt="slider">
+          <img src="img/slide2.jpg" alt="slider">
         </div> 
       </div>
       <div class="section-home you-might-like">
         <div class="heading-section">
-          <div class="sa-title popcat">Recipes You Might Like...</div>
+          <div class="sa-title popcat">Random Receipe</div>
           <div class="clear"></div>
         </div>
         <div class="yml-carousel">
           <div class="yml-box">
             <div class="yml-img">
-              <img src="img/food9.jpg" alt="you might like">
+              <script>
+                var randomid1 = Math.round(Math.random() * total_n) + 1
+                var jspath = "foodinfo/" + randomid1 + '.js'
+                var imgpath = "foodimg/" + randomid1 + '.jpg'
+                document.write("<script type='text/javascript' src='"+ jspath + "'><\/scr" + "ipt>");
+              </script>
+              <script>
+                document.write('<a href="recipe_page.html?id=' + randomid1 + '">')
+                document.write('<img src="' + imgpath + '" alt="you might like">')
+                document.write('</a>')
+              </script>
             </div>
-            <div class="yml-food-text">Chicken Fried Steak</div>
+            <div class="yml-food-text"><script>document.write(foodinfo.name)</script></div>
           </div>
           <div class="yml-box">
             <div class="yml-img">
-              <img src="img/food10.jpg" alt="you might like">
+              <script>
+                var randomid2 = Math.round(Math.random() * total_n) + 1
+                while (randomid2 == randomid1)
+                {
+                  randomid2 = Math.round(Math.random() * total_n) + 1
+                }
+                var jspath = "foodinfo/" + randomid2 + '.js'
+                var imgpath = "foodimg/" + randomid2 + '.jpg'
+                document.write("<script type='text/javascript' src='"+ jspath + "'><\/scr" + "ipt>");
+              </script>
+              <script>
+                document.write('<a href="recipe_page.html?id=' + randomid2 + '">')
+                document.write('<img src="' + imgpath + '" alt="you might like">')
+                document.write('</a>')
+              </script>
             </div>
-            <div class="yml-food-text">Grilled Fish Tacos</div>
+            <div class="yml-food-text"><script>document.write(foodinfo.name)</script></div>
           </div>
           <div class="yml-box">
             <div class="yml-img">
-              <img src="img/food11.jpg" alt="you might like">
+              <script>
+                var randomid3 = Math.round(Math.random() * total_n) + 1
+                while (randomid3 == randomid1 || randomid3 == randomid2)
+                {
+                  randomid3 = Math.round(Math.random() * total_n) + 1
+                }
+                var jspath = "foodinfo/" + randomid3 + '.js'
+                var imgpath = "foodimg/" + randomid3 + '.jpg'
+                document.write("<script type='text/javascript' src='"+ jspath + "'><\/scr" + "ipt>");
+              </script>
+              <script>
+                document.write('<a href="recipe_page.html?id=' + randomid3 + '">')
+                document.write('<img src="' + imgpath + '" alt="you might like">')
+                document.write('</a>')
+              </script>
             </div>
-            <div class="yml-food-text">Steak with Garlic</div>
-          </div>
-          <div class="yml-box">
-            <div class="yml-img">
-              <img src="img/food12.jpg" alt="you might like">
-            </div>
-            <div class="yml-food-text">Harvest Salad</div>
-          </div>
-          <div class="yml-box">
-            <div class="yml-img">
-              <img src="img/food13.jpg" alt="you might like">
-            </div>
-            <div class="yml-food-text">Cheesy Pizza</div>
-          </div>
-          <div class="yml-box">
-            <div class="yml-img">
-              <img src="img/food14.jpg" alt="you might like">
-            </div>
-            <div class="yml-food-text">Teriyaki Chicken</div>
+            <div class="yml-food-text"><script>document.write(foodinfo.name)</script></div>
           </div>
         </div>
-      </div>
-      <div class="section-home s-category">
-        <div class="heading-section">
-          <div class="sa-title popcat">Popular Categories</div>
-          <div class="clear"></div>
-        </div>
-        <div class="home-category-list">
-          <div class="home-box-category">
-            <div class="home-text-category">
-              <div class="bc-text">Quick and Easy</div>
-            </div>
-            <div class="home-image-category">
-              <img src="img/food1.jpg" alt="image-category">
-            </div>
-          </div>
-          <div class="home-box-category">
-            <div class="home-text-category">
-              <div class="bc-text">Dinner Ideas</div>
-            </div>
-            <div class="home-image-category">
-              <img src="img/food2.jpg" alt="image-category">
-            </div>
-          </div>
-          <div class="home-box-category">
-            <div class="home-text-category">
-              <div class="bc-text">Healthy</div>
-            </div>
-            <div class="home-image-category">
-              <img src="img/food3.jpg" alt="image-category">
-            </div>
-          </div>
-          <div class="home-box-category">
-            <div class="home-text-category">
-              <div class="bc-text">Vegetarian</div>
-            </div>
-            <div class="home-image-category">
-              <img src="img/food4.jpg" alt="image-category">
-            </div>
-          </div>
-          <div class="home-box-category">
-            <div class="home-text-category">
-              <div class="bc-text">Cakes and Baking</div>
-            </div>
-            <div class="home-image-category">
-              <img src="img/food5.jpg" alt="image-category">
-            </div>
-          </div>
-          <div class="home-box-category">
-            <div class="home-text-category">
-              <div class="bc-text">World Cuisine</div>
-            </div>
-            <div class="home-image-category">
-              <img src="img/food6.jpg" alt="image-category">
-            </div>
-          </div>
-          <div class="home-box-category">
-            <div class="home-text-category">
-              <div class="bc-text">Meal Type</div>
-            </div>
-            <div class="home-image-category">
-              <img src="img/food7.jpg" alt="image-category">
-            </div>
-          </div>
-          <div class="home-box-category">
-            <div class="home-text-category">
-              <div class="bc-text">Chicken Recipes</div>
-            </div>
-            <div class="home-image-category">
-              <img src="img/food8.jpg" alt="image-category">
-            </div>
-          </div>
-          <div class="clear"></div>
           <div class=" more-category">
+            <a href="recipe_list.html">
             <div class="theme-button mcbutton">See More</div>
+            </a>
           </div>
-        </div>
       </div>
-      <div class="section-home home-banner">
-        <img src="img/banner.jpg">
-      </div> 
-      <div class="section-home home-news">
-        <div class="heading-section">
-         <div class="sa-title popcat">News & Tips</div> 
-          <div class="clear"></div>
-        </div>
-        <div class="home-news-wrap">
-          <div class="news-item">
-            <div class="news-content">
-              <div class="hnw-img">
-                <img src="img/news.jpg" alt="news">
-              </div>
-              <div class="hnw-desc">
-                <div class="hnw-title">15 Totally Healthy Grilling Recipes</div>
-                <div class="hnw-text">
-                  Lorem ipsum dolor sit amet, adipiscing elit... <a href="news.html" class="more">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="news-item">
-            <div class="news-content">
-              <div class="hnw-img">
-                <img src="img/news2.jpg" alt="news">
-              </div>
-              <div class="hnw-desc">
-                <div class="hnw-title">Foods That Are Super Healthy</div>
-                <div class="hnw-text">
-                  dolor sit amet, Lorem ipsum adipiscing elit... <a href="news.html" class="more">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="news-item">
-            <div class="news-content">
-              <div class="hnw-img">
-                <img src="img/news3.jpg" alt="news">
-              </div>
-              <div class="hnw-desc">
-                <div class="hnw-title">17 Authentic local food in Yogyakarta</div>
-                <div class="hnw-text">
-                  Lorem ipsum dolor adipiscing elit... <a href="news.html" class="more">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class=" more-category">
-            <a href="news_list.html"><div class="theme-button mcbutton">More News</div></a> 
-          </div>
-        </div>
-      </div>
-      <div class="section-home recipe-author">
-        <div class="heading-section">
-          <div class="sa-title popcat">Top Author</div>
-          <div class="clear"></div>
-        </div>
-        <div class="home-author">
-          <div class="author-box">
-            <div class="author-img">
-              <img src="img/profile.jpg" alt="author">
-            </div>
-            <div class="author-name">Amanda</div>
-          </div>
-          <div class="author-box">
-            <div class="author-img">
-              <img src="img/profile2.jpg" alt="author">
-            </div>
-            <div class="author-name">Nicola</div>
-          </div>
-          <div class="author-box">
-            <div class="author-img">
-              <img src="img/profile8.jpg" alt="author">
-            </div>
-            <div class="author-name">Sally</div>
-          </div>
-          <div class="author-box">
-            <div class="author-img">
-              <img src="img/profile4.jpg" alt="author">
-            </div>
-            <div class="author-name">Connor</div>
-          </div>
-          <div class="author-box">
-            <div class="author-img">
-              <img src="img/profile5.jpg" alt="author">
-            </div>
-            <div class="author-name">Olivia</div>
-          </div>
-          <div class="author-box">
-            <div class="author-img">
-              <img src="img/profile6.jpg" alt="author">
-            </div>
-            <div class="author-name">Peter</div>
-          </div>
-          <div class="author-box">
-            <div class="author-img">
-              <img src="img/profile7.jpg" alt="author">
-            </div>
-            <div class="author-name">Walker</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SUBSCRIBE -->
-<div class="section-subscribe">
-  <div class="subcontainer">
-    <div class="subrow">
-      <div class="subcol">
-        <div class="section-title">SUBSCRIBE</div>
-        <p class="textsub">Get news and food recipes every day</p>
-        <div class="mail-subscribe-box">
-          <form name="subsribe">
-          <input class="form-control" name="user-email" placeholder="Enter email address" value="" type="email">
-          <button type="submit" class="submitsub"> <i class="fa fa-angle-right"></i></button>
-        </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-subscribe">
-    <img src="img/food4.jpg" alt="banner">
-  </div>
-</div>
-<!-- END SUBSCRIBE -->
-
     </div>
     <!-- .Content wrap  -->
     <!-- Footer  -->
     <div class="footer">
       <div class="footer-heading">Follow Us</div>
-      <div class="socmed">
-    <div class="socmed-line">       
-        <div class="socmed-item">
-          <a href="#" class="si-icon"> <i class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
-
-    <div class="socmed-line">
-        <div class="socmed-item">
-          <a href="#" class="si-icon"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-    <div class="socmed-line">
-        <div class="socmed-item">
-          <a href="#" class="si-icon"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-
-    <div class="socmed-line">
-        <div class="socmed-item">
-          <a href="#" class="si-icon"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-      </div>
-    </div>
     <!-- .Footer  -->
   </div>
   <!-- .Page content  -->
