@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from resptheme.com/tf/foodkuy/_preview/green-leaf/homepage.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Jan 2020 19:51:28 GMT -->
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<title>Foodkuy - Mobile HTML Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="HandheldFriendly" content="True">
+<link rel="icon" href="favicon.html" type="image/x-icon">
+
+<!-- Bootstrap v4.3.1 CSS -->
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/theme/themelibrary.css">
+<!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="lib/slick/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="lib/slick/slick/slick-theme.css">
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="lib/Magnific-Popup-master/dist/magnific-popup.html">
+<!-- Font Awesome Free 5.10.2 JS -->
+<script defer src="lib/fontawesome-free-5.10.2-web/js/brands.js"></script>
+<script defer src="lib/fontawesome-free-5.10.2-web/js/solid.js"></script>
+<script defer src="lib/fontawesome-free-5.10.2-web/js/fontawesome.js"></script>
+</head>
+<body class="default">
+<script type="text/javascript" src="js/getUrlParam.js"></script>
+<script>
+    var id = UrlParam.paramValues("id");
+    var jspath = "foodinfo/" + id + '.js'
+    var imgpath = "foodimg/" + id + '.jpg'
+    console.log(jspath)
+    document.write("<script type='text/javascript' src='"+ jspath + "'><\/scr" + "ipt>");
+</script>
+<!-- Preloading -->
+<div class="preloading">
+  <div class="wrap-preload">
+    <div class="cssload-loader"></div>
+  </div>
+</div>
+<!-- .Preloading -->
+
+<div class="wrapper">
+  <!-- Sidebar left -->
+  <nav id="sidebarleft" class="sidenav">
+  <div id="dismiss">
+    <i class="fas fa-times"></i>
+  </div>
+  <div class="sidebar-header">
+    <h3>Menu</h3>
+  </div>
+  <ul class="list-unstyled components">
+    <li>
+      <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
+    </li>
+    <li>
+      <a href="#pagemyaccount" data-toggle="collapse" aria-expanded="false"><i class="fas fa-user"></i> My Account <span><i class="fas fa-caret-down"></i></span></a>
+      <ul class="collapse collapsible-body" id="pagemyaccount">
+        <li>
+          <a href="new_recipe.html">Add new recipe</a>
+        </li>
+        <li>
+          <a href="profile.html">Profile</a>
+        </li>
+
+        <li>
+          <a href="setting.html">Setting</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#pagesubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-clone"></i> Pages <span><i class="fas fa-caret-down"></i></span></a>
+      <ul class="collapse collapsible-body" id="pagesubmenu">
+        <li>
+          <a href="homepage.html">Home</a>
+        </li>
+        <li>
+          <a href="recipe_list.html">Recipe list</a>
+        </li>
+        <li>
+          <a href="recipe_page.html">Recipe page</a>
+        </li> 
+        <li>
+          <a href="author.html">Author</a>
+        </li>
+        <li>
+          <a href="feedback.html">Feedback</a>
+        </li>
+        <li>
+          <a href="setting.html">Setting</a>
+        </li>
+        <li>
+          <a href="gallery.html">Gallery</a>
+        </li>
+         <li>
+          <a href="news_list.html">News list</a>
+        </li>
+        <li>
+          <a href="news.html">News</a>
+        </li>
+        <li>
+          <a href="register.html">Register</a>
+        </li>
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+        <li>
+          <a href="new_recipe.html">New recipe</a>
+        </li>
+        <li>
+          <a href="profile.html">Profile</a>
+        </li>
+        <li>
+          <a href="favorite.html">Favorites</a>
+        </li>
+        <li>
+          <a href="single_page.html">Single page</a>
+        </li>
+        <li>
+          <a href="404.html">404 error page</a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+  </nav>
+  <!-- .Sidebar left -->
+  <!-- Sidebar right -->
+  <!-- Sidebar right -->
+  <!-- Page content  -->
+  <div id="content">
+    <!-- Header  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-header">
+    <div class="container-fluid">
+      <button type="button" id="sidebarleftbutton" class="btn">
+      <i class="fas fa-align-left"></i>
+      </button>
+      <div class="logo">Grocery Helper</div>
+    </div>
+    </nav>
+    <!-- .Header  -->
+    <!-- Content Wrap  -->
+        <div class="content-wrap">
+          
+          
+          <div class="food-page-section">
+            <div class="wrap-food-recipe">
+              <div class="heading-page">
+                <script> document.write(foodinfo.name) </script>
+                <div class="back-btn">
+                  <div class="icon-back"><i class="fas fa-chevron-left"></i></div>
+                  
+                </div>
+              </div>
+              <div class="image-favourite">
+                <div id="food-recipe-image" class="pg-product-image">
+                  <!-- image -->
+                  <div>
+                    <div class="pgp-wrap-img">
+                      <div class="pgp-wrap-img-in">
+                        <div class="pgp-img">
+                          <script>
+                            document.write("<img src='"+ imgpath + "'>");
+                          </script>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end image -->
+                  
+                </div>
+               
+              </div>
+              <div class="recipe-description">
+                
+                <div class="rd-tab">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#tab1">Description</a>
+                    </li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div id="tab1" class=" tab-pane active">
+                      <div class="tab-detail-rcp">
+                        <div class="recp-detail"> <div class="recp-heading">Name</div>
+                        <script> document.write(foodinfo.name) </script>
+                      </div>
+                      <div class="tab-detail-rcp">
+                        <div class="recp-detail"> <div class="recp-heading">Ingredients</div>
+                        <script> document.write(foodinfo.ingredients) </script>
+                      </div>
+                      <div class="tab-detail-rcp">
+                        <div class="recp-detail"> <div class="recp-heading">Keywords</div>
+                        <script> document.write(foodinfo.keyword) </script>
+                      </div>
+                      <div class="tab-detail-rcp">
+                        <div class="recp-detail"> <div class="recp-heading">Duration</div>
+                        <script> document.write(foodinfo.duration) </script>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="share-button">
+                    TODO: share
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+        </div>
+        
+      </div>
+    </div>
+    <!-- .Content wrap  -->
+    <!-- Footer  -->
+    <div class="footer">
+      <div class="footer-heading">Follow Us</div>
+    <!-- .Footer  -->
+  </div>
+  <!-- .Page content  -->
+  <div class="overlay"></div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery v3.4.1 -->
+  <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+  <!--  Bootstrap v4.3.1 JS -->
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Magnific Popup core JS file -->
+  <script src="lib/Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
+  <!-- Slick JS -->
+  <script src="lib/slick/slick/slick.min.js"></script>
+  <!--  Custom JS -->
+  <script src="js/theme.js"></script>
+</div>
+</body>
+
+<!-- Mirrored from resptheme.com/tf/foodkuy/_preview/green-leaf/homepage.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Jan 2020 19:54:06 GMT -->
+</html>
