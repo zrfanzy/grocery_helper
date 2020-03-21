@@ -87,7 +87,7 @@
       </div>
       <div class="section-home you-might-like">
         <div class="heading-section">
-          <div class="sa-title popcat">Random Receipe</div>
+          <div class="sa-title popcat">Random Recipes</div>
           <div class="clear"></div>
         </div>
         <div class="yml-carousel">
