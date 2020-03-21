@@ -30,16 +30,7 @@
 <script defer src="lib/fontawesome-free-5.10.2-web/js/fontawesome.js"></script>
 </head>
 <body class="default">
-<script type="text/javascript" src="js/getUrlParam.js"></script>
-<script>
-    var id = UrlParam.paramValues("id");
-    if (id == undefined){
-      var id = "1"
-    }
-    var jspath = "foodinfo/" + id + '.js'
-    var imgpath = "foodimg/" + id + '.jpg'
-    document.write("<script type='text/javascript' src='"+ jspath + "'><\/scr" + "ipt>");
-</script>
+
 <!-- Preloading -->
 <div class="preloading">
   <div class="wrap-preload">
@@ -47,6 +38,7 @@
   </div>
 </div>
 <!-- .Preloading -->
+
 <div class="wrapper">
   <!-- Sidebar left -->
   <nav id="sidebarleft" class="sidenav">
@@ -146,82 +138,58 @@
     </nav>
     <!-- .Header  -->
     <!-- Content Wrap  -->
-        <div class="content-wrap">
-          
-          
-          <div class="food-page-section">
-            <div class="wrap-food-recipe">
-              <div class="heading-page">
-                <script> document.write(foodinfo.name) </script>
-                <div class="back-btn">
-                  <div class="icon-back"><i class="fas fa-chevron-left"></i></div>
-                  
-                </div>
-              </div>
-              <div class="image-favourite">
-                <div id="food-recipe-image" class="pg-product-image">
-                  <!-- image -->
-                  <div>
-                    <div class="pgp-wrap-img">
-                      <div class="pgp-wrap-img-in">
-                        <div class="pgp-img">
-                          <script>
-                            document.write("<img src='"+ imgpath + "'>");
-                          </script>
-                         
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end image -->
-                  
-                </div>
-               
-              </div>
-              <div class="recipe-description">
-                
-                <div class="rd-tab">
-                  <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link active" data-toggle="tab" href="#tab1">Description</a>
-                    </li>
-                  </ul>
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div id="tab1" class=" tab-pane active">
-                      <div class="tab-detail-rcp">
-                        <div class="recp-detail"> <div class="recp-heading">Name</div>
-                        <script> document.write(foodinfo.name) </script>
-                      </div>
-                      <div class="tab-detail-rcp">
-                        <div class="recp-detail"> <div class="recp-heading">Ingredients</div>
-                        <script> document.write(foodinfo.ingredients) </script>
-                      </div>
-                      <div class="tab-detail-rcp">
-                        <div class="recp-detail"> <div class="recp-heading">Keywords</div>
-                        <script> document.write(foodinfo.keyword) </script>
-                      </div>
-                      <div class="tab-detail-rcp">
-                        <div class="recp-detail"> <div class="recp-heading">Duration</div>
-                        <script> document.write(foodinfo.duration) </script>
-                      </div>
-                    </div>
-                    
-                  </div>
-                  <div class="share-button">
-                    TODO: share
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          
-          
-          
-          
+    <div class="content-wrap">
+      <div class="img-hero">
+        <div>
+          <img src="img/slide1.jpg" alt="slider">
         </div>
-        
+        <div>
+          <img src="img/slide2.jpg" alt="slider">
+        </div> 
+      </div>
+      <div class="section-home you-might-like">
+        <div class="heading-section">
+          <div class="sa-title popcat">Random Receipe</div>
+          <div class="clear"></div>
+        </div>
+        <div class="yml-carousel">
+          <div class="yml-box">
+            <div class="yml-img">
+              <img src="img/food9.jpg" alt="you might like">
+            </div>
+            <div class="yml-food-text">Chicken Fried Steak</div>
+          </div>
+          <div class="yml-box">
+            <div class="yml-img">
+              <img src="img/food10.jpg" alt="you might like">
+            </div>
+            <div class="yml-food-text">Grilled Fish Tacos</div>
+          </div>
+          <div class="yml-box">
+            <div class="yml-img">
+              <img src="img/food11.jpg" alt="you might like">
+            </div>
+            <div class="yml-food-text">Steak with Garlic</div>
+          </div>
+          <div class="yml-box">
+            <div class="yml-img">
+              <img src="img/food12.jpg" alt="you might like">
+            </div>
+            <div class="yml-food-text">Harvest Salad</div>
+          </div>
+          <div class="yml-box">
+            <div class="yml-img">
+              <img src="img/food13.jpg" alt="you might like">
+            </div>
+            <div class="yml-food-text">Cheesy Pizza</div>
+          </div>
+          <div class="yml-box">
+            <div class="yml-img">
+              <img src="img/food14.jpg" alt="you might like">
+            </div>
+            <div class="yml-food-text">Teriyaki Chicken</div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- .Content wrap  -->
